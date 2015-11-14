@@ -1,7 +1,7 @@
 # live-bitcoin-price
 ========
 
-[Live Example]()
+[Live Example](http://monger.us/live-btc-price/index.php)
 
 Shows live bitcoin price in USD, EUR, GBP, and CNY
 
