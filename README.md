@@ -3,7 +3,7 @@
 
 Shows live bitcoin price in USD, EUR, GBP, and CNY
 
-prices and currency conversion according to [http://www.coindesk.com/api/](CoinDesk's API)
+prices and currency conversion according to [CoinDesk's API](http://www.coindesk.com/api/)
 
 
 
