@@ -1,9 +1,11 @@
 # live-bitcoin-price
 ========
 
+[Live Example]()
+
 Shows live bitcoin price in USD, EUR, GBP, and CNY
 
-prices and currency conversion according to [CoinDesk's API](http://www.coindesk.com/api/)
+prices and currency conversion according to [CoinDesk's API](http://monger.us/live-btc-price/index.php)
 
 
 
