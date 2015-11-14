@@ -32,19 +32,19 @@ $jsonB = json_decode($fileb);
 $jsonC = json_decode($filec);
 
 //usd
-$usd = round($jsonA->bpi->USD->rate, 2);
+$usd = number_format((float)$jsonA->bpi->USD->rate, 2, '.', '');
 $dollar = $jsonA->bpi->USD->symbol;
 
 //eu
-$eu = round ($jsonA->bpi->EUR->rate, 2);
+$eu = number_format((float)$jsonA->bpi->EUR->rate, 2, '.', '');
 $euro = $jsonA->bpi->EUR->symbol;
 
 //gbp
-$gbp = round ($jsonB->bpi->GBP->rate, 2);
+$gbp = number_format((float)$jsonB->bpi->GBP->rate, 2, '.', '');
 $pound = $jsonB->bpi->GBP->code;
 
 //cny
-$cn = round($jsonC->bpi->CNY->rate_float, 2);
+$cn = number_format((float)$jsonC->bpi->CNY->rate_float, 2, '.', '');
 $cny = $jsonC->bpi->CNY->code;
 
 //page reload
