@@ -40,6 +40,8 @@
 	<div class="row" align="center">
 		<div class="col-md-4 col-md-offset-4">
 		
+			<!--USD,EUR,GBP, and CNY-->
+		
 			<div class="btn-group btn-group-lg" data-toggle="buttons">
 			  <label class="btn btn-primary active" id="usd">
 				<input type="checkbox" name="options" autocomplete="off" checked> USD
@@ -54,7 +56,43 @@
 				<input type="checkbox" name="options" id="cny" autocomplete="off"> CNY
 			  </label>
 			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row" align="center">
+		<div class="col-md-12">
+			<!--JPY,CAD,AUD,CHF-->
 			
+			<div class="btn-group btn-group" data-toggle="buttons">
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#jpy-data" aria-expanded="false" aria-controls="eur-data">
+				<input type="checkbox" name="options" id="jpy" autocomplete="off"> JPY
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#cad-data" aria-expanded="false" aria-controls="cad-data">
+				<input type="checkbox" name="options" id="cad" autocomplete="off"> CAD
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#aud-data" aria-expanded="false" aria-controls="aud-data">
+				<input type="checkbox" name="options" id="aud" autocomplete="off"> AUD
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#chf-data" aria-expanded="false" aria-controls="chf-data">
+				<input type="checkbox" name="options" id="chf" autocomplete="off"> CHF
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#nzd-data" aria-expanded="false" aria-controls="nzd-data">
+				<input type="checkbox" name="options" id="nzd" autocomplete="off"> NZD
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#sek-data" aria-expanded="false" aria-controls="sek-data">
+				<input type="checkbox" name="options" id="sek" autocomplete="off"> SEK
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#rub-data" aria-expanded="false" aria-controls="rub-data">
+				<input type="checkbox" name="options" id="rub" autocomplete="off"> RUB
+			  </label>
+			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#brl-data" aria-expanded="false" aria-controls="brl-data">
+				<input type="checkbox" name="options" id="brl" autocomplete="off"> BRL
+			  </label>
+			</div>
+		
+		</div>
+		<div class="col-md-4 col-md-offset-4">
+		
 			<h1>1 <i class="fa fa-btc"></i>itcoin :</h1>
 			
 			<!--usd-->
@@ -64,6 +102,7 @@
 				
 			
 				 <h3><small>US Dollar</small></h3> 
+				 
 
 			</div>	 
 			<!--euro-->	 
@@ -79,7 +118,7 @@
 				 
 				<h2 id="gbp-result"></h2>	 
 				
-				 <h3><small>Brittish Pound Sterling</small></h3>
+				 <h3><small>Pound Sterling</small></h3>
 
 			</div>	 
 			<!--CNY-->	 
@@ -87,7 +126,63 @@
 				 
 				<h2 id="cny-result"></h2>	 
 				
-				 <h3><small>Chinese Yuan Renminbi</small></h3>
+				 <h3><small>Chinese Yuan</small></h3>
+			</div>
+			<!--JPY-->	 
+			<div id="jpy-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="jpy-result"></h2>	 
+				
+				 <h3><small>Japanese Yen</small></h3>
+			</div>
+			<!--CAD-->	 
+			<div id="cad-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="cad-result"></h2>	 
+				
+				 <h3><small>Canadian Dollar</small></h3>
+			</div>
+			<!--AUD-->	 
+			<div id="aud-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="aud-result"></h2>	 
+				
+				 <h3><small>Australian Dollar</small></h3>
+			</div>
+			<!--CHF-->	 
+			<div id="chf-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="chf-result"></h2>	 
+				
+				 <h3><small>Swiss Franc</small></h3>
+			</div>
+			<!--NZD-->	 
+			<div id="nzd-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="nzd-result"></h2>	 
+				
+				 <h3><small>New Zealand Dollar</small></h3>
+			</div>
+			<!--SEK-->	 
+			<div id="sek-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="sek-result"></h2>	 
+				
+				 <h3><small>Swedish Krona</small></h3>
+			</div>
+			<!--RUB-->	 
+			<div id="rub-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="rub-result"></h2>	 
+				
+				 <h3><small>Russian Ruble</small></h3>
+			</div>
+			<!--BRL-->	 
+			<div id="brl-data" class="collapse panel panel-default">	 
+				 
+				<h2 id="brl-result"></h2>	 
+				
+				 <h3><small>Brazilian Real</small></h3>
 			</div>
 
 			
