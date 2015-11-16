@@ -1,28 +1,22 @@
 function ajaxCall() {
 	var ajax1 = $.ajax({
-		url: "https://api.coindesk.com/v1/bpi/currentprice.json",
+		url: "http://blockchain.info/ticker",
 		dataType: 'json',
 		success: function(data){
-			var usd = (data.bpi.USD.rate_float).toFixed(2);
-			var eur = (data.bpi.EUR.rate_float).toFixed(2);
-			var gbp = (data.bpi.GBP.rate_float).toFixed(2);
+			var usd = (data.USD.last).toFixed(2);
+			var eur = (data.EUR.last).toFixed(2);
+			var gbp = (data.GBP.last).toFixed(2);
+			var cny = (data.CNY.last).toFixed(2);
 			$('#usd-result').html('$' + usd);
 			$('#eur-result').html('<i class="fa fa-eur"></i>' + eur);
 			$('#gbp-result').html('<i class="fa fa-gbp"></i>' + gbp);
+			$('#cny-result').html('CNY ' + cny);
 			//set title to USD
 			$('title').html('$'+usd);
-		}
-	});
-	var ajax2 = $.ajax({
-		url: "https://api.coindesk.com/v1/bpi/currentprice/CNY.json",
-		dataType: 'json',
-		success: function(data){
-			var cny = (data.bpi.CNY.rate_float).toFixed(2);
-			$('#cny-result').html('CNY ' + cny);
 		}
 	});
 }
 
 ajaxCall();
 
-setInterval(ajaxCall, 15000)
+setInterval(ajaxCall, 30000)
