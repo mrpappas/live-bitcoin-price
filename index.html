@@ -14,6 +14,8 @@
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	
+	<link rel="stylesheet" href="styles.css">
+	
 	<link rel="icon" 
       type="image/ico" 
       href="http://www.bitcoin-exchange-berlin.com/favicon.ico">
@@ -26,10 +28,13 @@
 		  <div class="container-fluid">
 			<div class="navbar-header">
 			  <a class="navbar-brand" href="#">
-				<p>Live <i class="fa fa-btc"></i>itcoin Price</p>
+				<p><i class="fa fa-btc"></i>itcoin Live Price</p>
 			  </a>
 			  <p class="navbar-text navbar-right"><a href="https://github.com/mrpappas" target="_blank">by Ben Pappas <i class="fa fa-github"></i></a></p>
 			</div>
+			 <ul class="nav navbar-nav navbar-right">
+				<p class="navbar-text hidden-xs"><a href="calculator.html">Exchange Calculator <i class="fa fa-calculator"></i></a></p>
+			 </ul>
 		  </div>
 		</nav>
 		
@@ -60,10 +65,10 @@
 	</div>
 	<br>
 	<div class="row" align="center">
-		<div class="col-md-12">
+		<div class="col-md-6 col-md-offset-3">
 			<!--JPY,CAD,AUD,CHF-->
 			
-			<div class="btn-group btn-group" data-toggle="buttons">
+			<div class="btn-group btn-group-justified btn-group-sm" data-toggle="buttons">
 			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#jpy-data" aria-expanded="false" aria-controls="eur-data">
 				<input type="checkbox" name="options" id="jpy" autocomplete="off"> JPY
 			  </label>
@@ -76,6 +81,8 @@
 			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#chf-data" aria-expanded="false" aria-controls="chf-data">
 				<input type="checkbox" name="options" id="chf" autocomplete="off"> CHF
 			  </label>
+			</div>
+			<div class="btn-group btn-group-justified btn-group-sm" data-toggle="buttons">
 			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#nzd-data" aria-expanded="false" aria-controls="nzd-data">
 				<input type="checkbox" name="options" id="nzd" autocomplete="off"> NZD
 			  </label>
@@ -98,7 +105,7 @@
 			<!--usd-->
 			<div id="usd-data" class="panel panel-default">
 				
-				<h2 id="usd-result"></h2>
+				<h2 class="usd-result"></h2>
 				
 			
 				 <h3><small>US Dollar</small></h3> 
@@ -108,7 +115,7 @@
 			<!--euro-->	 
 			<div id="eur-data"  class="collapse panel panel-default">	 
 				 
-				<h2 id="eur-result"></h2>	 
+				<h2 class="eur-result"></h2>	 
 				
 				 <h3><small>Euro</small></h3>
 
@@ -116,7 +123,7 @@
 			<!--GBP-->	 
 			<div id="gbp-data"  class="collapse panel panel-default">	 
 				 
-				<h2 id="gbp-result"></h2>	 
+				<h2 class="gbp-result"></h2>	 
 				
 				 <h3><small>Pound Sterling</small></h3>
 
@@ -124,63 +131,63 @@
 			<!--CNY-->	 
 			<div id="cny-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="cny-result"></h2>	 
+				<h2 class="cny-result"></h2>	 
 				
 				 <h3><small>Chinese Yuan</small></h3>
 			</div>
 			<!--JPY-->	 
 			<div id="jpy-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="jpy-result"></h2>	 
+				<h2 class="jpy-result"></h2>	 
 				
 				 <h3><small>Japanese Yen</small></h3>
 			</div>
 			<!--CAD-->	 
 			<div id="cad-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="cad-result"></h2>	 
+				<h2 class="cad-result"></h2>	 
 				
 				 <h3><small>Canadian Dollar</small></h3>
 			</div>
 			<!--AUD-->	 
 			<div id="aud-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="aud-result"></h2>	 
+				<h2 class="aud-result"></h2>	 
 				
 				 <h3><small>Australian Dollar</small></h3>
 			</div>
 			<!--CHF-->	 
 			<div id="chf-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="chf-result"></h2>	 
+				<h2 class="chf-result"></h2>	 
 				
 				 <h3><small>Swiss Franc</small></h3>
 			</div>
 			<!--NZD-->	 
 			<div id="nzd-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="nzd-result"></h2>	 
+				<h2 class="nzd-result"></h2>	 
 				
 				 <h3><small>New Zealand Dollar</small></h3>
 			</div>
 			<!--SEK-->	 
 			<div id="sek-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="sek-result"></h2>	 
+				<h2 class="sek-result"></h2>	 
 				
 				 <h3><small>Swedish Krona</small></h3>
 			</div>
 			<!--RUB-->	 
 			<div id="rub-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="rub-result"></h2>	 
+				<h2 class="rub-result"></h2>	 
 				
 				 <h3><small>Russian Ruble</small></h3>
 			</div>
 			<!--BRL-->	 
 			<div id="brl-data" class="collapse panel panel-default">	 
 				 
-				<h2 id="brl-result"></h2>	 
+				<h2 class="brl-result"></h2>	 
 				
 				 <h3><small>Brazilian Real</small></h3>
 			</div>
@@ -188,13 +195,17 @@
 			
 			
 		</div>
-
+		
 	</div>
-
+	
+	<div class="row" align="center">
+		<div class="col-md-12">
+			<h4><a href="calculator.html">New! Exchange Calculator <i class="fa fa-calculator"></i></a></h4>
+		</div>
+	</div>
 		<footer align="center">
 			Data from <a href="https://blockchain.info/api" target="_blank">Blockchain.info/api</a>
-		</footer>
-	
+		</footer>	
 	</div>
 	
 	

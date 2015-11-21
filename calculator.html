@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
+
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="styles.css">
+	
+	<link rel="icon" 
+      type="image/ico" 
+      href="http://www.bitcoin-exchange-berlin.com/favicon.ico">
+
+
+  </head>
+  <body>
+  
+  
+  
+	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">
+				<p><i class="fa fa-btc"></i>itcoin Exchange Calculator <i class="fa fa-calculator"></i></p>
+			  </a>
+			  <p class="navbar-text navbar-right"><a href="https://github.com/mrpappas" target="_blank">by Ben Pappas <i class="fa fa-github"></i></a></p>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<p class="navbar-text hidden-xs"><a href="index.html">Live Ticker <i class="fa fa-line-chart"></i></a></p>
+			 </ul>
+		  </div>
+		</nav>
+		
+	<br />
+	
+	<div class="row" align="center">
+		<div class="col-md-12">
+			<h1>Bitcoin Exchange Calculator</h1>
+		</div>
+		<div class="col-md-4 col-md-offset-4">
+			<h1><i class="fa fa-calculator"></i><h1>
+				<form class="form-inline" id="conversion" onsubmit="return false" oninput="o.value = (parseFloat(a.value) * (b.value)).toFixed(5) + ' BTC'">
+					<div class="form-group">
+					
+						<div class="input-group">
+						  <input type="number" id="numberInput" step="0.01" name="a" class="form-control" aria-label="...">
+						  <input id="conversionRate" type="hidden" name="b" value="">
+							<br>
+							  <div class="dropdown">
+							  <button class="btn btn-success dropdown-toggle" id="dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onClick="this.form.reset()">
+								 USD
+								<span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1" id="currencyList">
+							  <li><a href="#" data-value="usd" value="usd"><i class="fa fa-usd"></i> USD</a></li>
+								<li><a href="#" data-value="eur" value="eur"><i class="fa fa-eur"></i> EUR</a></li>
+								<li><a href="#" data-value="gbp" value="gbp"><i class="fa fa-gbp"></i> GBP</a></li>
+								<li><a href="#" data-value="cny" value="cny"><i class="fa fa-jpy"></i> CNY</a></li>
+								<li><a href="#" data-value="jpy" value="jpy"><i class="fa fa-jpy"></i> JPY</a></li>
+								<li><a href="#" data-value="cad" value="cad"><i class="fa fa-usd"></i> CAD</a></li>
+								<li><a href="#" data-value="aud" value="aud"><i class="fa fa-usd"></i> AUD</a></li>
+								<li><a href="#" data-value="nzd" value="nzd"><i class="fa fa-usd"></i> NZD</a></li>
+								<li><a href="#" data-value="rub" value="rub"><i class="fa fa-rub"></i> RUB</a></li>
+								<li><a href="#" data-value="brl" value="brl"><i class="fa fa-usd"></i> BRL</a></li>
+								<li><a href="#" data-value="chf" value="chf">CHF</a></li>
+								<li><a href="#" data-value="sek" value="sek">SEK (kr)</a></li>
+							  </ul>
+							</div>
+							<h4><small>Select Currency</small></h4>
+						</div>
+					</div>
+				</form>
+		</div>
+	</div>
+	
+	<!--output-->
+	<div class="row" align="center">
+		<div class="col-md-12">
+			<output id="output" form="conversion" name="o"></output>
+		</div>
+	</div>
+	
+	<div class="row" align="center">
+		<div class="col-md-12">
+			<h4><a href="index.html">Live Ticker <i class="fa fa-line-chart"></i></a></h4>
+		</div>
+	</div>
+
+		<footer align="center">
+			Exchange rates derived from <a href="https://blockchain.info/api" target="_blank">Blockchain.info/api</a>
+		</footer>
+	
+	</div>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="scripts.js"></script>
+
+  </body>
+</html>
