@@ -6,6 +6,7 @@ function ajaxCall() {
 	var ajax1 = $.ajax({
 		url: "http://blockchain.info/ticker",
 		dataType: 'json',
+		crossDomain: true,
 		success: function(data){
 			//select last price (both)
 			var usd = (data.USD.last).toFixed(2);
@@ -89,6 +90,6 @@ function ajaxCall() {
 
 ajaxCall();
 
-setInterval(ajaxCall, 30000)
+setInterval(ajaxCall, 30000);
 
 
