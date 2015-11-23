@@ -1,10 +1,11 @@
+
 //this script controls index.html and calculator.html
 //comments for index are labeled (ticker), comments for calculator (calculator), and comments for both (both)
 //data from  https://blockchain.info/ticker
 
 function ajaxCall() {
 	var ajax1 = $.ajax({
-		url: "http://blockchain.info/ticker",
+		url: "ticker.json",
 		dataType: 'json',
 		crossDomain: true,
 		success: function(data){
@@ -91,5 +92,4 @@ function ajaxCall() {
 ajaxCall();
 
 setInterval(ajaxCall, 30000);
-
 
