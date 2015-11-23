@@ -1,11 +1,16 @@
 # live-bitcoin-price
+Live Exchange Rates + Calculator
 ========
 
 [Live Example](http://monger.us/live-btc-price/)
 
-Shows live bitcoin price in USD, EUR, GBP, and CNY
+Shows live bitcoin price in USD, EUR, GBP, CNY, JPY, CAD, AUD, CHF, NZD, SEK, RUB, and BRL
 
-prices and currency conversion according to [Blockchain.info](https://blockchain.info/api)
+live prices according to 'last' transaction [Blockchain.info](https://blockchain.info/api)
+
+Calculator takes any above mentioned currency and converts to bitcoin value
+
+pyticker.cgi grabs data from [Blockchain.info](https://blockchain.info/api) and dumps into ticker.json.
 
 
 
