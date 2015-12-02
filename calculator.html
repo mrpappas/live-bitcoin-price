@@ -1,18 +1,20 @@
+	
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 
-    <title></title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Loading..</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
 	
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<link rel="icon" 
       type="image/ico" 
@@ -29,7 +31,7 @@
 		  <div class="container-fluid">
 			<div class="navbar-header">
 			  <a class="navbar-brand" href="#">
-				<p><i class="fa fa-btc"></i>itcoin Exchange Calculator <i class="fa fa-calculator"></i></p>
+				<p>Exchange Calculator <i class="fa fa-calculator"></i></p>
 			  </a>
 			  <p class="navbar-text navbar-right"><a href="https://github.com/mrpappas" target="_blank">by Ben Pappas <i class="fa fa-github"></i></a></p>
 			</div>
@@ -44,9 +46,14 @@
 	<div class="row" align="center">
 		<div class="col-md-12">
 			<h1>Bitcoin Exchange Calculator</h1>
+			<h1><i class="fa fa-calculator"></i></h1>
+		</div>
+		<br>
+		<div class="col-md-12">
+				<output id="output" form="conversion" name="o"></output>
 		</div>
 		<div class="col-md-4 col-md-offset-4">
-			<h1><i class="fa fa-calculator"></i><h1>
+			
 				<form class="form-inline" id="conversion" onsubmit="return false" oninput="o.value = (parseFloat(a.value) * (b.value)).toFixed(5) + ' BTC'">
 					<div class="form-group">
 					
@@ -54,8 +61,9 @@
 						  <input type="number" id="numberInput" step="0.01" name="a" class="form-control" aria-label="...">
 						  <input id="conversionRate" type="hidden" name="b" value="">
 							<br>
+							<br>
 							  <div class="dropdown">
-							  <button class="btn btn-success dropdown-toggle" id="dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onClick="this.form.reset()">
+							  <button class="btn btn-success btn-lg dropdown-toggle" id="dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onClick="this.form.reset()">
 								 USD
 								<span class="caret"></span>
 							  </button>
@@ -81,27 +89,20 @@
 		</div>
 	</div>
 	
-	<!--output-->
-	<div class="row" align="center">
-		<div class="col-md-12">
-			<output id="output" form="conversion" name="o"></output>
-		</div>
-	</div>
-	
 	<div class="row" align="center">
 		<div class="col-md-12">
 			<h4><a href="index.html">Live Ticker <i class="fa fa-line-chart"></i></a></h4>
 		</div>
 	</div>
-
+	<br>
 		<footer align="center">
-			Exchange rates derived from <a href="https://blockchain.info/api" target="_blank">Blockchain.info/api</a>
+			Data from <a href="https://blockchain.info/api" target="_blank">Blockchain.info/api</a>
 		</footer>
 	
 	</div>
 	
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="scripts.js"></script>
 

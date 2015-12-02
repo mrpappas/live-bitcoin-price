@@ -24,7 +24,7 @@ function refreshCurrencies(data) {
   for (var i = 0; i < currencies.length; i++) {
     var currency = currencies[i];
     var name = currency[0].toLowerCase();
-    var price = getPrice(currency[0]);
+	var price = getPrice(currency[0]);
 
     // append to markup in price ticker
     $('.' + name + '-result').html(currency[1] + price + currency[2]);
@@ -35,7 +35,8 @@ function refreshCurrencies(data) {
   $('title').html('$' + usd);
 
   // set default conversion rate to USD
-  $('#conversionRate').attr("value", 1 / usd);
+  var conversionRate = $('#conversionRate');
+  $(conversionRate).attr("value", 1 / usd);
 
   // when dropdown li is selected becomes default
   $(".dropdown-menu li a").click(function() {
@@ -48,11 +49,11 @@ function refreshCurrencies(data) {
 
     // get exchange rate and set to selectedCurrency
     var rate = getPrice(selectedCurrency.toUpperCase());
-    $("#conversionRate").attr("value", 1 / rate);
+    $(conversionRate).attr("value", 1 / rate);
   });
 }
 
-function ajaxCall() {
+function updateTicker() {
   $.ajax({
     url: "ticker.json",
     dataType: 'json',
@@ -61,5 +62,6 @@ function ajaxCall() {
   });
 }
 
-ajaxCall();
-setInterval(ajaxCall, 30000);
+updateTicker();
+setInterval(updateTicker, 15000);
+

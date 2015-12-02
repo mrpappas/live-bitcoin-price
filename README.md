@@ -8,9 +8,12 @@ Shows live bitcoin price in USD, EUR, GBP, CNY, JPY, CAD, AUD, CHF, NZD, SEK, RU
 
 live prices according to 'last' transaction [Blockchain.info](https://blockchain.info/api)
 
-Calculator takes any above mentioned currency and converts to bitcoin value
+Calculator takes any above mentioned currency and converts to bitcoin value (currency -> btc)
 
-pyticker.cgi grabs data from [Blockchain.info](https://blockchain.info/api) and dumps into ticker.json.
+pyticker.cgi grabs data from [Blockchain.info](https://blockchain.info/api) inserts into ticker.json, loops for ~15 minutes.  
+
+Set up cron job to run pyticker.py every 15 mins.
+
 
 
 
