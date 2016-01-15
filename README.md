@@ -10,7 +10,7 @@ live prices according to 'last' transaction [Blockchain.info](https://blockchain
 
 Calculator takes any above mentioned currency and converts to bitcoin value (currency -> btc)
 
-pyticker.cgi grabs data from [Blockchain.info](https://blockchain.info/api) inserts into ticker.json, loops for ~15 minutes.  
+pyticker.py grabs data from [Blockchain.info](https://blockchain.info/api) inserts into ticker.json, loops for ~15 minutes.  
 
 Set up cron job to run pyticker.py every 15 mins.
 
