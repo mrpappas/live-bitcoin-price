@@ -2,7 +2,7 @@
 Live Exchange Rates + Calculator
 ========
 
-[Live Example](http://monger.us/live-btc-price/)
+[Live Example](http://mongr.co/live-btc-price/)
 
 Shows live bitcoin price in USD, EUR, GBP, CNY, JPY, CAD, AUD, CHF, NZD, SEK, RUB, and BRL
 
